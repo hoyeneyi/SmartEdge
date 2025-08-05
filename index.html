@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartEdge Tax Consultants</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #0d9488, #1e3a8a);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 px-2 sm:px-0">
+  <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+            <div class="flex items-center space-x-3">
+            <img src="assets/images/logo1.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-4 text-sm font-semibold">
+            <a href="index.html" class="text-teal-600 font-bold">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
+            <a href="services.html" class="text-gray-700 hover:text-teal-600">Services</a>
+            <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
+            </nav>
+
+            <!-- Hamburger -->
+            <div class="md:hidden">
+            <button id="hamburger" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-white">
+            <a href="index.html" class="text-teal-600 font-bold">Home</a>
+            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+            <a href="services.html" class="block text-gray-700 hover:text-teal-600">Services</a>
+            <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact</a>
+        </div>
+    </header>
+
+  <!-- Hero -->
+  <section id="home" class="gradient-bg text-white text-center py-24 px-4">
+    <h1 class="text-5xl font-extrabold mb-4">Fast & Accurate</h1>
+    <p class="text-xl mb-8 max-w-xl mx-auto">Maximize your refund with trustworthy tax professionals who care about your financial future.</p>
+    <a href="contact.html" class="bg-black text-teal-400 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-200 transition inline-block">Book Your Appointment</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6 text-gray-900">About SmartEdge</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        At SmartEdge Tax Consultants, we believe in simple, honest, and efficient service. Whether you’re filing a basic return or need help navigating complex tax issues, we provide clarity and peace of mind. 
+        Our personalized approach ensures you receive every credit and deduction you’re entitled to.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition min-h-[150px]">
+          <h3 class="text-xl font-semibold mb-2 text-teal-700">Tax Preparation</h3>
+          <p>Federal and state returns filed accurately and on time.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition min-h-[150px]">
+          <h3 class="text-xl font-semibold mb-2 text-teal-700">Audit Protection</h3>
+          <p>We support you in case the IRS reviews your return.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition min-h-[150px]">
+          <h3 class="text-xl font-semibold mb-2 text-teal-700">Advance Loans</h3>
+          <p>Get your refund money faster with a tax advance loan.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition min-h-[150px]">
+          <h3 class="text-xl font-semibold mb-2 text-teal-700">Mobile Service</h3>
+          <p>We can work with you remotely — from wherever you are.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2 text-teal-700">Business Tax Solutions</h3>
+          <p>Whether you’re a freelancer or a growing business, we help you stay compliant and tax-efficient year-round.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow opacity-50 min-h-[150px]">
+          <h3 class="text-xl font-semibold mb-2 text-gray-400">Credit Repair <span class="text-sm text-teal-600">(Coming Soon)</span></h3>
+          <p>We'll help boost your credit when this service launches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-12">What Our Clients Say</h2>
+      <div class="grid gap-8 sm:grid-cols-2">
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <p class="italic">“The team at SmartEdge took the stress out of filing my taxes. Their professionalism and care made the whole process seamless.”</p>
+          <p class="mt-4 font-semibold text-teal-600">– Alicia T.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <p class="italic">“I got my refund faster than expected and learned a lot in the process. Highly recommend SmartEdge to anyone looking for expert help.”</p>
+          <p class="mt-4 font-semibold text-teal-600">– Marcus B.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <p class="italic">“Clear, honest, and quick! They made sure I received every credit I was entitled to. I’ll never go anywhere else.”</p>
+          <p class="mt-4 font-semibold text-teal-600">– Keisha W.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <p class="italic">“SmartEdge gave me peace of mind and got me the best refund I’ve ever received. Thank you!”</p>
+          <p class="mt-4 font-semibold text-teal-600">– Jamal R.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6 text-gray-900">Contact Us</h2>
+      <p class="mb-4 text-gray-700 text-lg">Have questions or ready to file your taxes? Reach out today.</p>
+      <p class="text-2xl font-semibold text-teal-600 mb-6">Call: 248.818.7407</p>
+      <a href="mailto:Tamarap@smartedgetax.net" class="bg-black text-white px-8 py-3 rounded-full shadow hover:bg-gray-400 transition inline-block">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center leading-relaxed">
+    <p>&copy; 2025 SmartEdge Tax Consultants. All rights reserved.</p>
+  </footer>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

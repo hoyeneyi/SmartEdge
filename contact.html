@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | SmartEdge Tax Consultants</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(to right, #0d9488, #1e3a8a);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="index.html">
+        <img src="assets/images/logo1.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
+      </a>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
+        <a href="services.html" class="text-gray-700 hover:text-teal-600">Services</a>
+        <a href="contact.html" class="text-teal-600 font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="gradient-bg text-white text-center py-20 px-4">
+    <h1 class="text-5xl font-extrabold mb-4">Let’s Connect</h1>
+    <p class="text-lg max-w-2xl mx-auto">We’re here to guide your tax journey and help you get the refund you deserve — quickly and stress-free.</p>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Reach Out Today</h2>
+      <p class="text-lg text-gray-700 mb-8">Call us, email us, or use the form below — we’ll respond promptly and professionally.</p>
+      <div class="space-y-4 text-lg">
+        <p><span class="font-semibold text-teal-700">Phone:</span> 248.818.7407</p>
+        <p><span class="font-semibold text-teal-700">Email:</span> <a href="mailto:Tamarap@smartedgetax.net" class="text-teal-700 hover:underline">Tamarap@smartedgetax.net</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 px-6 bg-gray-100">
+    <div class="max-w-2xl mx-auto">
+      <h3 class="text-2xl font-bold text-center mb-6 text-gray-900">Send Us a Message</h3>
+      <form action="https://formspree.io/f/xkgzqqed" method="POST" class="bg-white p-6 rounded-lg shadow-md space-y-4">
+        <input 
+            type="text" 
+            name="name"
+            placeholder="Full Name" 
+            required 
+            class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+        >
+
+        <input 
+            type="email" 
+            name="email"
+            placeholder="Email Address" 
+            required 
+            class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+        >
+
+        <input 
+            type="tel" 
+            name="phone"
+            placeholder="Phone Number" 
+            required 
+            class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+        >
+
+        <textarea 
+            name="message"
+            placeholder="Your Message" 
+            rows="5" 
+            required 
+            class="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+        ></textarea>
+
+        <div class="text-center pt-2">
+            <button 
+            type="submit" 
+            class="bg-black text-white px-8 py-2 rounded-full hover:bg-gray-400 transition"
+            >
+            Send Message
+            </button>
+        </div>
+        </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+    <p>&copy; 2025 SmartEdge Tax Consultants. All rights reserved.</p>
+  </footer>
+</body>
+</html>
