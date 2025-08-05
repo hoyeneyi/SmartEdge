@@ -29,11 +29,12 @@ document.getElementById("scrollToTop")?.addEventListener("click", () => {
 });
 
 // ✅ Working Mobile nav toggle
-const menuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-nav');
+const menuToggle = document.getElementById('mobile-menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
 
-if (menuButton && mobileMenu) {
-  menuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
   });
 }
+
