@@ -35,6 +35,14 @@ const mobileNav = document.getElementById('mobile-nav');
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener('click', () => {
     mobileNav.classList.toggle('hidden');
+    mobileNav.classList.toggle('animate-slide-down');
+  });
+
+  // Close mobile menu on link click
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.add('hidden');
+      mobileNav.classList.remove('animate-slide-down');
+    });
   });
 }
-
