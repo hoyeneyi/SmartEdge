@@ -9,42 +9,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    html {
+        scroll-behavior: smooth;
+    }
     body {
-      font-family: 'Inter', sans-serif;
+        font-family: 'Inter', sans-serif;
     }
     .gradient-bg {
-      background: linear-gradient(to right, #0d9488, #1e3a8a);
+        background: linear-gradient(to right, #0d9488, #1e3a8a);
     }
-  </style>
+
+    /* Slide-down animation */
+    @keyframes slideDown {
+        from {
+        opacity: 0;
+        transform: translateY(-10px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+    .animate-slide-down {
+        animation: slideDown 0.3s ease-out forwards;
+    }
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Navbar -->
+
+      <!-- Navbar -->
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
             <div class="flex items-center space-x-3">
-            <a href="index.html">
-                <img src="assets/images/logo1.png" alt="SmartEdge Logo" class="h-10 w-auto max-w-[160px]">
-            </a>
+            <img src="assets/images/logo1.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
             </div>
 
-            <!-- Hamburger Menu -->
-            <button id="mobile-menu-button" class="lg:hidden text-gray-800 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-            </button>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex space-x-6 text-sm font-semibold">
-            <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
-            <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
-            <a href="services.html" class="text-gray-700 hover:text-teal-600">Services</a>
-            <a href="contact.html" class="text-teal-600 font-bold">Contact</a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-4 text-sm font-semibold">
+                <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
+                <a href="services.html" class="text-gray-700 hover:text-teal-600">Services</a>
+                <a href="contact.html" class="text-teal-600 font-bold">Contact</a>
             </nav>
+
+            <!-- Hamburger -->
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-gray-800 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4 bg-white">
+        <div id="mobile-nav" class="md:hidden hidden absolute top-20 right-4 left-4 bg-white shadow-xl rounded-xl py-4 px-6 space-y-3 z-50 transition-transform transform origin-top scale-95 duration-200 ease-out">
             <a href="index.html" class="block py-2 text-gray-700 hover:text-teal-600">Home</a>
             <a href="about.html" class="block py-2 text-gray-700 hover:text-teal-600">About</a>
             <a href="services.html" class="block py-2 text-gray-700 hover:text-teal-600">Services</a>
