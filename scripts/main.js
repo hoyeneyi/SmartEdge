@@ -30,7 +30,7 @@ document.getElementById("scrollToTop")?.addEventListener("click", () => {
 
 // ✅ Working Mobile nav toggle
 const menuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenu = document.getElementById('mobile-nav');
 
 if (menuButton && mobileMenu) {
   menuButton.addEventListener('click', () => {
