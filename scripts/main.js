@@ -16,53 +16,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
 
-  // Toggle menu on button click
-  toggleButton.addEventListener('click', () => {
-    mobileNav.classList.toggle('hidden');
-  });
+  if (toggleButton && mobileNav) {
+    // Toggle mobile menu
+    toggleButton.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+      mobileNav.classList.toggle('animate-slide-down');
+    });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (event) => {
-    const isClickInsideMenu = mobileNav.contains(event.target);
-    const isClickToggle = toggleButton.contains(event.target);
+    // Close mobile menu on nav link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('animate-slide-down');
+      });
+    });
 
-    if (!isClickInsideMenu && !isClickToggle) {
-      mobileNav.classList.add('hidden');
-    }
-  });
-});
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      const isClickInsideMenu = mobileNav.contains(event.target);
+      const isClickToggle = toggleButton.contains(event.target);
+      if (!isClickInsideMenu && !isClickToggle) {
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('animate-slide-down');
+      }
+    });
+  }
 
-// Scroll-To-Top Button Logic
-window.addEventListener("scroll", () => {
+  // Scroll-To-Top Button Logic
   const scrollBtn = document.getElementById("scrollToTop");
   if (scrollBtn) {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.remove("hidden");
-    } else {
-      scrollBtn.classList.add("hidden");
-    }
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.remove("hidden");
+      } else {
+        scrollBtn.classList.add("hidden");
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 });
-
-document.getElementById("scrollToTop")?.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// ✅ Working Mobile nav toggle
-const menuToggle = document.getElementById('mobile-menu-toggle');
-const mobileNav = document.getElementById('mobile-nav');
-
-if (menuToggle && mobileNav) {
-  menuToggle.addEventListener('click', () => {
-    mobileNav.classList.toggle('hidden');
-    mobileNav.classList.toggle('animate-slide-down');
-  });
-
-  // Close mobile menu on link click
-  mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.add('hidden');
-      mobileNav.classList.remove('animate-slide-down');
-    });
-  });
-}
