@@ -12,6 +12,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  // Toggle menu on button click
+  toggleButton.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileNav.contains(event.target);
+    const isClickToggle = toggleButton.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickToggle) {
+      mobileNav.classList.add('hidden');
+    }
+  });
+});
+
 // Scroll-To-Top Button Logic
 window.addEventListener("scroll", () => {
   const scrollBtn = document.getElementById("scrollToTop");
