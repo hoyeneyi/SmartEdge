@@ -8,83 +8,76 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     html {
-        scroll-behavior: smooth;
+      scroll-behavior: smooth;
     }
     body {
-        font-family: 'Inter', sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #ccfbf1, #bfdbfe);
     }
-    .gradient-bg {
-        background: linear-gradient(to right, #0d9488, #1e3a8a);
+    .hero-bg {
+      background: linear-gradient(rgba(13, 148, 136, 0.7), rgba(30, 58, 138, 0.7)), url('assets/images/office3.jpg');
+      background-size: cover;
+      background-position: center;
     }
-
-    /* Slide-down animation */
     @keyframes slideDown {
-        from {
+      from {
         opacity: 0;
         transform: translateY(-10px);
-        }
-        to {
+      }
+      to {
         opacity: 1;
         transform: translateY(0);
-        }
+      }
     }
-
     .animate-slide-down {
-        animation: slideDown 0.3s ease-out forwards;
+      animation: slideDown 0.3s ease-out forwards;
     }
-</style>
-  <script defer src="main.js"></script>
+  </style>
+  <script defer src="scripts/main.js"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 px-2 sm:px-0">
+<body class="text-gray-800 px-2 sm:px-0">
 
-    <!-- Navbar -->
-    <header class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
-            <div class="flex items-center space-x-3">
-            <img src="assets/images/logo-dark.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
-            </div>
-
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex space-x-4 text-sm font-semibold">
-                <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
-                <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
-                <a href="services.html" class="text-teal-600 font-bold">Services</a>
-                <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
-            </nav>
-
-            <!-- Hamburger -->
-            <div class="md:hidden">
-                <button id="mobile-menu-toggle" class="text-gray-800 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-nav" class="md:hidden hidden absolute top-[72px] left-4 right-4 bg-white shadow-xl rounded-xl py-4 px-6 space-y-3 z-50 transition-all duration-300 ease-in-out">
-            <a href="index.html" class="block text-gray-700 hover:text-teal-600">Home</a>
-            <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
-            <a href="services.html" class="text-teal-600 font-bold">Services</a>
-            <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact</a>
-        </div>
-    </header>
-    
-  <!-- Header Section -->
-  <section class="relative text-white text-center py-24 px-4 bg-cover bg-center" style="background-image: url('assets/images/office-bg.png');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative z-10">
-      <h1 class="text-5xl font-extrabold mb-4">Our Services</h1>
-      <p class="text-xl max-w-2xl mx-auto">
-        Explore how SmartEdge can simplify your tax process and elevate your financial clarity.
-      </p>
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/logo-dark.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
+      </div>
+      <nav class="hidden md:flex space-x-4 text-sm font-semibold">
+        <a href="index.html" class="text-gray-700 hover:text-teal-600">Home</a>
+        <a href="about.html" class="text-gray-700 hover:text-teal-600">About</a>
+        <a href="services.html" class="text-teal-600 font-bold">Services</a>
+        <a href="contact.html" class="text-gray-700 hover:text-teal-600">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="text-gray-800 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="md:hidden hidden absolute top-[72px] left-4 right-4 bg-white shadow-xl rounded-xl py-4 px-6 space-y-3 z-50 transition-all duration-300 ease-in-out">
+      <a href="index.html" class="block text-gray-700 hover:text-teal-600">Home</a>
+      <a href="about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+      <a href="services.html" class="text-teal-600 font-bold">Services</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-teal-600">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg text-white text-center py-24 px-4">
+    <h1 class="text-5xl font-extrabold mb-4">Our Services</h1>
+    <p class="text-xl max-w-2xl mx-auto">
+      Explore how SmartEdge can simplify your tax process and elevate your financial clarity.
+    </p>
   </section>
 
   <!-- Services Section -->
-  <section class="bg-gray-100 py-20 px-6">
+  <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
@@ -116,7 +109,7 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="py-20 text-center bg-white">
+  <section class="py-20 text-center">
     <h2 class="text-3xl font-bold text-gray-900 mb-4">Need Help With Your Taxes?</h2>
     <p class="mb-6 text-lg text-gray-700">SmartEdge is here to make it simple. Schedule your session and experience the difference.</p>
     <a href="contact.html" class="bg-black text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-400 transition inline-block">Book Your Appointment</a>
@@ -126,6 +119,5 @@
   <footer class="bg-gray-900 text-white py-6 text-center">
     <p>&copy; 2025 SmartEdge Tax Consultants. All rights reserved.</p>
   </footer>
-  <script src="scripts/main.js" defer></script>
 </body>
 </html>
