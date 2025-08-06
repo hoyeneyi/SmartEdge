@@ -41,7 +41,7 @@
     <header class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
             <div class="flex items-center space-x-3">
-            <img src="assets/images/logo1.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
+            <img src="assets/images/logo-dark.png" alt="SmartEdge Logo" class="h-12 w-auto max-w-[180px]">
             </div>
 
             <!-- Desktop Nav -->
@@ -72,11 +72,29 @@
         </div>
     </header>
 
-  <!-- Hero -->
-  <section id="home" class="gradient-bg text-white text-center py-24 px-4">
-    <h1 class="text-5xl font-extrabold mb-4">Fast & Accurate</h1>
-    <p class="text-xl mb-8 max-w-xl mx-auto">Maximize your refund with trustworthy tax professionals who care about your financial future.</p>
-    <a href="contact.html" class="bg-black text-teal-400 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-200 transition inline-block">Book Your Appointment</a>
+  <section class="relative h-[750px] sm:h-[850px]">
+    <!-- Background Image -->
+    <img src="assets/images/office.png" alt="SmartEdge Office"
+        class="absolute inset-0 w-full h-full object-cover z-0" />
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-10"></div>
+
+    <!-- Content -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
+      </h1>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
+        Fast & Accurate
+      </h1>
+      <p class="text-lg sm:text-xl max-w-2xl mb-6 drop-shadow-md">
+        Maximize your refund with trustworthy tax professionals who care about your financial future.
+      </p>
+      <a href="contact.html"
+        class="bg-white text-black font-semibold px-8 py-3 rounded-full shadow-md hover:bg-gray-400 transition mb-10">
+        Book Your Appointment
+      </a>
+    </div>
   </section>
 
   <!-- About Section -->
